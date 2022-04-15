@@ -1,7 +1,25 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<!-- Navbar -->
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <button mat-icon-button>
+   <mat-icon>home</mat-icon>
+ </button>
+ <span>{{title}}</span>
+ <div class="app-menu">
+  <a mat-button routerLink="/heroes" routerLinkActive="active">HEROES</a>
+  <a mat-button routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
+</div>
+ <span class="app-spacer"></span>
+ <button mat-icon-button aria-label="Example icon-button with heart icon">
+   <mat-icon>favorite</mat-icon>
+ </button>
+ <button mat-icon-button aria-label="Example icon-button with share icon">
+  <mat-icon>share</mat-icon>
+</button>
+</mat-toolbar>
+<!--  -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <app-messages></app-messages>
+</footer>
