@@ -1,0 +1,495 @@
+{
+  "name": "angular-tour-of-heroes",
+  "version": "0.0.0",
+  "brief": "Introduction of heroes in 'avengers: age of ultron' and avengers: infinity war`.",
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Black Panther",
+      "fullName": "T'challa",
+      "groups": ["Avengers"],
+      "powersAndAbilities": [
+        "cat-like reflexes", 
+        "master martial artist", 
+        "dora milaje", 
+        "wakanda's vibranium"
+      ],
+      "shortDescription": "The ruler and protector of Wakanda",
+      "longDescription": "As the king of the African nation of Wakanda, T’Challa protects his people as the latest in a legacy line of Black Panther warriors.",
+      "avatarUrl": "assets/images/heroes/007blp_ons_crd_02.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Black Widow",
+      "fullName": "Natasha Romanoff",
+      "groups": ["Avengers", "Secret Avengers", "S.H.I.E.L.D."],
+      "powersAndAbilities": [
+        "superhuman agility",
+        "espionage",
+        "slowed aging"
+      ],
+      "shortDescription": "One of S.H.I.E.L.D.’s most deadly assassins and a frequent member of the Avengers.",
+      "longDescription": "Despite her origins as an agent of evil, Natasha Romanoff has become a force for good in the world of covert intelligence and super heroics. Like her namesake arachnid, Romanoff is stealthy, precise, and absolutely lethal. She is the Black Widow.",
+      "avatarUrl": "assets/images/heroes/011blw_ons_crd_04.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Captain America",
+      "fullName": "Steve Rogers",
+      "groups": ["Avengers", "Secret Avengers"],
+      "powersAndAbilities": [
+        "slowed aging",
+        "vibranium shield",
+        "super-soldier serum",
+        "leader & strategist"
+      ],
+      "shortDescription": "A man out of time, Steve Rogers continues his fight while leading the Avengers.",
+      "longDescription": "When Steve Rogers enlisted to fight in World War II, he didn’t do it to become a hero, or an icon, or a legend; he did it because he felt it was the right thing to do.",
+      "avatarUrl": "assets/images/heroes/003cap_ons_crd_03.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The Collector",
+      "fullName": "Taneleer Tivan",
+      "groups": [],
+      "powersAndAbilities": [
+        "transformation powers",
+        "immortality",
+        "alliance with the elders"
+      ],
+      "shortDescription": "Offbeat alien Taneleer Tivan seeks both objects and living creatures that he finds of interest for his massive collection, including unwilling participants and dangerous weapons.",
+      "longDescription": "Taneleer Tivan is a primordial Elder of the Universe. At the inception of time, Tivan and his Elder compatriots were some of greatest powers in existence. Tivan’s knowledge and worship of all things quickly led him to gather valuable artifacts.",
+      "avatarUrl": "assets/images/heroes/111ctt_ons_crd_02.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Corvus Glaive",
+      "fullName": "",
+      "groups": ["black order"],
+      "powersAndAbilities": [
+        "hand-to-hand combat",
+        "regeneration",
+        "superhuman strength"
+      ],
+      "shortDescription": "A loyal follower of Thanos, Corvus Glaive is a force to be reckoned with as he relentlessly strikes against those in his path.",
+      "longDescription": "As the Mad Titan’s right-hand man, Corvus Glaive’s loyalty to Thanos is unquestionable. Alongside his wife, Proxima Midnight, and the Black Order, Corvus Glaive and his namesake weapon will let nothing stand in the way of the destruction they crave.",
+      "avatarUrl": "assets/images/heroes/140cvg_ons_crd_02.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Doctor Erik Selvig",
+      "fullName": "Erik Selvig",
+      "groups": [],
+      "powersAndAbilities": [
+      ],
+      "shortDescription": "Dr. Erik Selvig, astrophysicist and professor, contributes his substantial knowledge to help the Avengers defeat their foes.",
+      "longDescription": "Dr. Erik Selvig had no idea what he got himself into when he agreed to safeguard the fragments of the Cosmic Cube for S.H.I.E.L.D. Once he formed a bond with Kobik and had his memories replaced, he suddenly found his loyalties leaning toward evil.",
+      "avatarUrl": "assets/images/heroes/150dre_ons_crd_01_0.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Doctor Strange",
+      "fullName": "Stephen Strange",
+      "groups": ["Avengers", "The Defenders", "Illuminati"],
+      "powersAndAbilities": [
+        "magic",
+        "utilization of eye of agamotto",
+        "cloak of levitation",
+        "astral projection"
+      ],
+      "shortDescription": "Formerly a renowned surgeon, Doctor Stephen Strange now serves as the Sorcerer Supreme—Earth’s foremost protector against magical and mystical threats.",
+      "longDescription": "As Earth’s Sorcerer Supreme, Doctor Strange wields arcane spells and mystical artifacts to defend the planet against malevolent threats.",
+      "avatarUrl": "assets/images/heroes/009drs_ons_crd_02.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Drax",
+      "fullName": "Drax The Destroyer",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "imprisoned",
+        "fighting ronan",
+        "power of the orb",
+        "eaten alive",
+        "attacking thanos"
+      ],
+      "shortDescription": "True to his name, Drax uses his super strength and combat skills to destroy any enemies of the galaxy.",
+      "longDescription": "Drax is a brutish, battle-tested warrior. A former intergalactic criminal, Drax has no interest in money, only avenging his slain family. Reluctant at first, the hero with an unquenchable murderous rage joins the Guardians of the Galaxy.",
+      "avatarUrl": "assets/images/heroes/025drx_ons_crd_02.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ebony Maw",
+      "fullName": "",
+      "groups": ["black order"],
+      "powersAndAbilities": [
+        "mind control",
+        "teleportation"
+      ],
+      "shortDescription": "Ruthlessly carrying out his master's orders, Ebony Maw uses his formidable powers to enforce Thanos' rule.",
+      "longDescription": "His allegiances may be unclear, but Ebony Maw’s ambitions are not to be doubted. As a henchman of Thanos, Maw can manipulate anyone to bend to his – or Thanos' – will. His powers have the ability to cause trouble for both sides of a battle.",
+      "avatarUrl": "assets/images/heroes/142ebm_ons_crd_02.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Gamora",
+      "fullName": "",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+      ],
+      "shortDescription": "The last survivor of an entire race, raised by evil, Gamora rebelled to live her own life among the stars!",
+      "longDescription": "As the last surviving member of the Zen-Whoberi, Gamora was adopted, raised and enhanced by the Mad Titan Thanos to be the deadliest warrior in the galaxy. Turning against her father, Gamora now uses her elite abilities to fight on the side of good.",
+      "avatarUrl": "assets/images/heroes/022gam_ons_crd_01-1.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Groot",
+      "fullName": "",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "branch-to-hand combat",
+        "one tough tree",
+        "regenerate & grow"
+      ],
+      "shortDescription": "Once thought to be an invader from space, Groot tries hard to be a hero and always do the right thing. I Am Groot.",
+      "longDescription": "",
+      "avatarUrl": "assets/images/heroes/024grt_ons_crd_01.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Hawkeye",
+      "fullName": "Clint Barton",
+      "groups": ["Avengers West Coast", "The Defenders"],
+      "powersAndAbilities": [
+        "unique arrows",
+        "archery",
+        "attack arrows",
+        "hand-to-hand combat"
+      ],
+      "shortDescription": "A master marksman and longtime friend of the Black Widow, Clint Barton serves as the Avengers’ amazing archer.",
+      "longDescription": "With a wit as quick as an arrow, Clint Barton used his incredible marksmanship and combat skills to become an efficient fighter on his own as well as with the Avengers. He may not have super powers, but he has his team’s back.",
+      "avatarUrl": "assets/images/heroes/hawkeye_ons_crd_01.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Heimdall",
+      "fullName": "",
+      "groups": [],
+      "powersAndAbilities": [
+        "extrasensory capabilities",
+        "superhuman strength"
+      ],
+      "shortDescription": "An all-seeing Asgardian in charge of guarding the Rainbow Bridge known as the Bifrost, Heimdall's keen skills serve him well as a first line of defense.",
+      "longDescription": "Heimdall is the guardian of the Bifrost Bridge, and as its gatekeeper, he controls access and travel between Asgard and the other nine realms. With his all-seeing eyes, Heimdall protects Asgard and all of its citizens.",
+      "avatarUrl": "assets/images/heroes/116hdl_ons_crd_01-1.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Hulk",
+      "fullName": "Bruce Banner",
+      "groups": ["Avengers", "The Defenders"],
+      "powersAndAbilities": [
+        "superhuman strength",
+        "speed",
+        "impenetrable skin",
+        "regeneration",
+        "intelligence"
+      ],
+      "shortDescription": "Dr. Bruce Banner lives a life caught between the soft-spoken scientist he's always been and the uncontrollable green monster powered by his rage.",
+      "longDescription": "Dr. Bruce Banner lives a quiet life, until he saves the life of teenager Rick Jones from a gamma bomb explosion. After this, the mild-mannered scientist transforms into a powerful being called the Hulk whenever he gets angry.",
+      "avatarUrl": "assets/images/heroes/006hbb_ons_crd_03.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Iron Man",
+      "fullName": "Tony Stark",
+      "groups": ["Avengers West Coast", "The Defenders", "Illuminati", "S.H.I.E.L.D."],
+      "powersAndAbilities": [
+        "360 vision",
+        "energy blasts",
+        "repulsor rays",
+        "extremis",
+        "collection of armor"
+      ],
+      "shortDescription": "Genius. Billionaire. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man.",
+      "longDescription": "Having created a wondrous suit of armor to keep himself alive, Tony has revised it dozens of times, each version with increased capabilities, faster operation, reduced energy usage, and adaptability to the greatest threats the universe has to offer.",
+      "avatarUrl": "assets/images/heroes/002irm_ons_crd_03.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Klaw",
+      "fullName": "Ulysses Klaue",
+      "groups": [],
+      "powersAndAbilities": [
+        "mastermind thief",
+        "high tech prosthetics",
+        "destructive frequencies",
+        "energy pulses"
+      ],
+      "shortDescription": "An ongoing enemy of Wakanda and its people, this clever criminal would replace his lost arm with a powerful weapon.",
+      "longDescription": "Raised with a hatred of Wakandans, Ulysses Klaw succeeded where his forebears didn't and assassinated a king of that nation, T'Chaka. In the process he made an enemy for life in the Black Panther.",
+      "avatarUrl": "assets/images/heroes/119klw_ons_crd_02.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Loki",
+      "fullName": "Loki Laufeyson",
+      "groups": [],
+      "powersAndAbilities": [
+        "sorcery & shape-shifting",
+        "energy blasts",
+        "superhuman strength"
+      ],
+      "shortDescription": "God of Mischief and brother to Thor, Loki’s tricks and schemes wreak havoc across the realms. This week on Marvel 101, it’s a battle for the throne of Asgard, no matter how tricky it gets!",
+      "longDescription": "The abandoned son of Frost Giant royalty, Loki Laufeyson was rescued from his home realm of Jotunheim and raised as a prince of Asgard by King Odin. Soon Loki became the God of Mischief and became a potent agent of evil and chaos across the realms.",
+      "avatarUrl": "assets/images/heroes/017lok_ons_crd_03.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Mantis",
+      "fullName": "This One",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "mind communication",
+        "communication with plants",
+        "skilled martial artist"
+      ],
+      "shortDescription": "Mantis trained as a warrior with alien priests to embrace greatness!",
+      "longDescription": "She’s green, not mean, and can talk to plants. Mantis is the green-skinned Guardian of the Galaxy with antennae sticking out of her head. Mantis is on the meditative side, but if her emotions are unleashed after a traumatic event, watch out!",
+      "avatarUrl": "assets/images/heroes/045mts_ons_crd_02.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Nebula",
+      "fullName": "",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "superhuman agility",
+        "unarmed combat",
+        "skilled with weapon"
+      ],
+      "shortDescription": "As a pirate and mercenary with her intentions set on conquering other empires, this daughter of Thanos is feared by many across the star systems.",
+      "longDescription": "Raised by Thanos, Nebula has never really known the meaning of family. She has, however, learned how to become a fighter. Fueled by jealousy of her sister Gamora and a taste for revenge, Nebula will work with whomever can serve her needs the best.",
+      "avatarUrl": "assets/images/heroes/043neb_ons_crd_03.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Okoye",
+      "fullName": "",
+      "groups": [],
+      "powersAndAbilities": [
+        "the fighter",
+        "vibranium spear",
+        "deadly precision"
+      ],
+      "shortDescription": "One of Wakanda's greatest warriors, Okoye proudly protects her country's king alongside the Dora Milaje.",
+      "longDescription": "Okoye serves the Black Panther as a personal bodyguard and the nation of Wakanda as a torchbearer of tradition and virtue. Okoye is as deadly as she is wise, and stands as one of T’Challa’s most trusted allies and companions.",
+      "avatarUrl": "assets/images/heroes/110oky_ons_crd_03.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Proxima Midnight",
+      "fullName": "",
+      "groups": ["black order"],
+      "powersAndAbilities": [
+        "quantum spear",
+        "impervious to projectiles",
+        "strength & agility"
+      ],
+      "shortDescription": "Proxima Midnight conquers across the galaxy for her master Thanos, with her deadly spear ever ready to strike.",
+      "longDescription": "Armed with her deadly star-powered spear, Proxima Midnight is one of the most feared allies of Thanos. The natural-born warrior has a bloodlust for battles and causing mass devastation to her enemies even without the Mad Titan by her side.",
+      "avatarUrl": "assets/images/heroes/141prx_ons_crd_02.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Rocket",
+      "fullName": "Rocket Raccoon",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "genetic alterations",
+        "mastermind",
+        "superior marksmanship",
+        "heightened senses"
+      ],
+      "shortDescription": "As the weapons and tactical expert of the Guardians of the Galaxy, Rocket risks his hide to defend the cosmos.",
+      "longDescription": "Ain’t no thing like Rocket, ‘cept Rocket. He lives for the simple things, including collecting valuable bounty alongside his friend and partner, Groot. Quick to train a weapon on anyone who offends him, he’s far more formidable than he appears.",
+      "avatarUrl": "assets/images/heroes/023rra_ons_crd_03.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Falcon",
+      "fullName": "Sam Wilson",
+      "groups": ["The Defenders"],
+      "powersAndAbilities": [
+        "hand-to-hand combat",
+        "flight"
+      ],
+      "shortDescription": "Sam Wilson, formerly the Falcon, takes on the mantle of Captain America as he teams up with his fellow Avengers.",
+      "longDescription": "Splitting time between his busy career as a Super Hero and his day job as a social worker, Harlem native Sam Wilson has made it his life’s work to carry on his late father’s message of hope and faith in humanity through his actions as Falcon.",
+      "avatarUrl": "assets/images/heroes/cap_ons_crd_01.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Scarlet Witch",
+      "fullName": "Wanda Maximoff",
+      "groups": ["Avengers", "Avengers West Coast"],
+      "powersAndAbilities": [
+        "chaos magic",
+        "no more powers",
+        "resurrection",
+        "telekinesis",
+        "psychic defenses"
+      ],
+      "shortDescription": "A powerful mutant sorceress, Wanda Maximoff has been a master of the mystical arts for both the X-Men and the Avengers.",
+      "longDescription": "One of the most powerful magic-wielders on the planet, the Scarlet Witch casts her spells to aid the downtrodden as an Avenger while seeking out the roots of sorcery wherever they may grow.",
+      "avatarUrl": "assets/images/heroes/012scw_ons_crd_02.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Shuri",
+      "fullName": "Aja-Adanna",
+      "groups": [],
+      "powersAndAbilities": [
+        "genius intelligence",
+        "inventions",
+        "creation of vibranium gauntlets"
+      ],
+      "shortDescription": "The younger sister of T'Challa, the Black Panther, Shuri astounds with her brilliant inventions, often providing key components to her brother's battles.",
+      "longDescription": "As part of the Wakandan royal line, she has developed her own physical strength and vast knowledge. But once she became the Black Panther herself, she was nearly unstoppable - a hero in her own right.",
+      "avatarUrl": "assets/images/heroes/107shr_ons_crd_02.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Spider-Man",
+      "fullName": "Peter Parker",
+      "groups": ["frightful four"],
+      "powersAndAbilities": [
+        "web scrawler",
+        "superhuman strength",
+        "spider-sense",
+        "web shooter"
+      ],
+      "shortDescription": "Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.",
+      "longDescription": "With amazing spider-like abilities, teenage science whiz Peter Parker fights crime and dreams of becoming an Avenger as Spider-Man.",
+      "avatarUrl": "assets/images/heroes/005smp_ons_crd_02.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Star-Lord",
+      "fullName": "Peter Quill",
+      "groups": ["Guardians of The Galaxy"],
+      "powersAndAbilities": [
+        "force field",
+        "kree-fitted helmet",
+        "super friends"
+      ],
+      "shortDescription": "Leader of the Guardians of the Galaxy, Peter Quill, known as Star-Lord, brings a sassy sense of humor while protecting the universe from any and all threats.",
+      "longDescription": "Peter Quill always longed to adventure across the universe. After joining NASA and encountering a celestial being on one of his first trips to space, Quill chose to venture out on his own as the intergalactic Super Hero known as Star-Lord",
+      "avatarUrl": "assets/images/heroes/021slq_ons_crd_02.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Thanos",
+      "fullName": "",
+      "groups": ["black order"],
+      "powersAndAbilities": [
+        "super strength",
+        "psychic abilities",
+        "immortality"
+      ],
+      "shortDescription": "The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes.",
+      "longDescription": "The Mad Titan called Thanos is known across all reality as one of the most powerful beings in existence. Obsessed with order and fate, the god works tirelessly to bring all living things to heel—to make the universe as he sees it should be.",
+      "avatarUrl": "assets/images/heroes/019tha_ons_crd_03.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Thor",
+      "fullName": "Thor Odinson",
+      "groups": ["Avengers", "heralds of galactus"],
+      "powersAndAbilities": [
+        "mjolnir",
+        "superhuman strength",
+        "hand-to-hand combat"
+      ],
+      "shortDescription": "The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike.",
+      "longDescription": "Thor, the God of Thunder, the son of Odin, the Asgardian prince, wields the mystical mallet Mjolnir as he protects innocents across the realms on his own and as a member of the Avengers. He takes his name from the inscription on his famous weapon.",
+      "avatarUrl": "assets/images/heroes/004tho_ons_crd_03.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Ultron",
+      "fullName": "",
+      "groups": [],
+      "powersAndAbilities": [
+        "intelligence",
+        "ultroids",
+        "eye blasts",
+        "robotic form"
+      ],
+      "shortDescription": "The creation gone awry, the sentient robot Ultron hates and seeks to wipe out humanity.",
+      "longDescription": "Robot. Megalomaniacal genius. Science experiment gone wrong. Take your pick because any of those descriptions fit Ultron, perhaps the most recognizable enemy ever to oppose the Avengers.",
+      "avatarUrl": "assets/images/heroes/061ult_ons_crd_01-1.jpg"
+    },
+    {
+      "id": 31,
+      "name": "The Vision",
+      "fullName": "Victor Shade",
+      "groups": ["Avengers", "Avengers West Coast"],
+      "powersAndAbilities": [
+        "density",
+        "superhuman strength",
+        "flight",
+        "energy beam",
+        "computer interface"
+      ],
+      "shortDescription": "The android called Vision defies physics and fights as an Avenger with the power of density manipulation and his flawless computer brain.",
+      "longDescription": "Built by man, but forged by fate, the amazing android Vision commands unearthly powers and abilities to fight for humanity while seeking his own best purpose.",
+      "avatarUrl": "assets/images/heroes/013vis_ons_crd_01-1.jpg"
+    },
+    {
+      "id": 32,
+      "name": "War Machine",
+      "fullName": "James Rhodes",
+      "groups": ["Secret Avengers"],
+      "powersAndAbilities": [
+        "walking arsenal",
+        "superhuman strength",
+        "information at his fingertips",
+        "flight"
+      ],
+      "shortDescription": "Military veteran James Rhodes is ready for combat in his advanced armor, adding a formidable arsenal to Tony Stark-created designs.",
+      "longDescription": "They may not always see eye to eye, but James “Rhodey” Rhodes and Tony Stark have formed a close camaraderie since they first met. Rhodes provides a helping hand in a fight – with the help of his War Machine armor, he can level the playing field.",
+      "avatarUrl": "assets/images/heroes/042wmr_ons_crd_03.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Winter Soldier",
+      "fullName": "Bucky Barnes",
+      "groups": [],
+      "powersAndAbilities": [
+        "combat",
+        "marksmanship",
+        "master assassin"
+      ],
+      "shortDescription": "Bucky Barnes was brought back from his supposed death to be a brainwashed assassin called the Winter Soldier. Reformed by his friends, he now fights alongside the Avengers.",
+      "longDescription": "James Buchanan 'Bucky' Barnes fought alongside Captain America during World War II. Like Cap, however, Bucky met a seemingly unfortunate demise during the war. Barnes reemerged as the brainwashed Russian agent known as the Winter Soldier.",
+      "avatarUrl": "assets/images/heroes/015wsb_ons_crd_03.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Wong",
+      "fullName": "",
+      "groups": [],
+      "powersAndAbilities": [
+        "master of sorcery",
+        "eldritch magic",
+        "sling ring",
+        "wand of watoomb",
+        "master of martial arts"
+      ],
+      "shortDescription": "A master of the martial and mystic arts, Wong is a close companion of Doctor Strange.",
+      "longDescription": "Wong descends from a long line of men who have served mystics, so he was practically destined to assist Doctor Stephen Strange. They have experienced some bumps in their magical road, but in the end, they have stood by to serve and help each other.",
+      "avatarUrl": "assets/images/heroes/079wng_ons_crd_03.jpg"
+    }
+  ]
+}

@@ -3,11 +3,11 @@
 <div class="heroes-menu">
   <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
     <mat-card class="hero-card">
-      <img mat-card-image src="assets/imgs/example.jpg" alt="Photo of hero">
+      <img mat-card-image src={{hero.avatarUrl}} alt="Photo of hero">
       <mat-card-title>{{hero.name}}</mat-card-title>
       <mat-card-content>
         <p>
-          The brief description of hero.
+          {{hero.shortDescription}}
         </p>
       </mat-card-content>
     </mat-card>

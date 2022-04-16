@@ -12,13 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular Material
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { BoardComponent } from './board/board.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    BoardComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
