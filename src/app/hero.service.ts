@@ -36,7 +36,8 @@ export class HeroService {
     }
     // Return an observable with a user-facing error message.
     return throwError(
-      'Something bad happened; please try again later.');
+      () => new Error('Something bad happened; please try again later.')
+    );
   }
 }
 
