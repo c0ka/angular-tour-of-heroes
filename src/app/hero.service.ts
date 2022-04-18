@@ -3,7 +3,7 @@
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { retry, catchError, throwError, map } from 'rxjs';
+import { retry, catchError, throwError, map, tap, Observable, of } from 'rxjs';
 
 import { MessageService } from './message.service';
 
@@ -18,12 +18,21 @@ export class HeroService {
 
   getHeroes() {
     // specify the response object type withe an Interface
-    const heroes = this.http.get<MockHeroes>(this.heroesUrl).pipe(
+    const heroes$ = this.http.get<MockHeroes>(this.heroesUrl).pipe(
+      tap(_ => this.messageService.add('HeroService: fetched heroes')),
       retry(3),
       catchError(this.handleError),
+    ).pipe(
+      map( data => data.heroes)
     )
-    this.messageService.add('HeroService: fetched heroes')
-    return heroes
+    
+    return heroes$
+  }
+
+  getHero(id: number = 1): Observable<Hero | undefined> {
+    return this.getHeroes().pipe(
+      map( heroes => heroes.find( hero => hero.id === id))
+    )
   }
 
   private handleError(error: HttpErrorResponse) {

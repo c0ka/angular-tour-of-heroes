@@ -4,12 +4,10 @@
   <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
     <mat-card class="hero-card">
       <img mat-card-image src={{hero.avatarUrl}} alt="Photo of hero">
-      <mat-card-title>{{hero.name}}</mat-card-title>
-      <mat-card-content>
-        <p>
-          {{hero.shortDescription}}
-        </p>
-      </mat-card-content>
+      <mat-card-title-group class="hero-title">
+        <mat-card-title>{{hero.name}}</mat-card-title>
+        <mat-card-subtitle>{{hero.fullName}}</mat-card-subtitle>
+      </mat-card-title-group>
     </mat-card>
   </a>
 </div>

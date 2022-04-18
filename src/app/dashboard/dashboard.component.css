@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 
-.hero-card {
+mat-card {
   margin: 1rem auto;
   width: 13.5rem;
   /* flexbox */
@@ -30,8 +30,12 @@ a {
   align-self: auto;
 }
 
-.hero-card img {
+mat-card img {
   height: auto;
+}
+
+mat-card mat-card-title-group {
+  height: 4rem;
 }
 /* @media (min-width: 600px) {
   a {

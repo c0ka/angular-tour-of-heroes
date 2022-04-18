@@ -21,7 +21,7 @@ export class RequestCacheWithMap implements RequestCache{
 
   cache = new Map<string, RequestCacheEntry>()
 
-  constructor(private messenger: MessageService) { }
+  constructor(private messageService: MessageService) { }
 
   get(req: HttpRequest<any>): HttpResponse<any> | undefined {
     const url = req.urlWithParams
@@ -31,7 +31,7 @@ export class RequestCacheWithMap implements RequestCache{
 
     const isExpired = cached.lastRead < (Date.now() - maxAge)
     const expired = isExpired ? 'expired ' : ''
-    this.messenger.add(
+    this.messageService.add(
       `Found ${expired}cached response for "${url}"."`
     )
     return isExpired ? undefined : cached.response
@@ -39,7 +39,7 @@ export class RequestCacheWithMap implements RequestCache{
 
   put(req: HttpRequest<any>, response: HttpResponse<any>): void {
     const url = req.urlWithParams
-    this.messenger.add(`Caching response from "${url}"."`)
+    this.messageService.add(`Caching response from "${url}"."`)
 
     const newEntry = { url, response, lastRead: Date.now() }
     this.cache.set(url, newEntry)
@@ -52,6 +52,7 @@ export class RequestCacheWithMap implements RequestCache{
       }
     })
 
-    this.messenger.add(`Request cache size: ${this.cache.size}.`)
+    this.messageService.add(`Request cache size: ${this.cache.size}.`)
   }
+
 }
