@@ -31,7 +31,7 @@ export class RequestCacheWithMap implements RequestCache{
 
     const isExpired = cached.lastRead < (Date.now() - maxAge)
     const expired = isExpired ? 'expired ' : ''
-    this.messageService.add(
+    this.messageService.emit(
       `Found ${expired}cached response for "${url}"."`
     )
     return isExpired ? undefined : cached.response
@@ -39,7 +39,7 @@ export class RequestCacheWithMap implements RequestCache{
 
   put(req: HttpRequest<any>, response: HttpResponse<any>): void {
     const url = req.urlWithParams
-    this.messageService.add(`Caching response from "${url}"."`)
+    this.messageService.emit(`Caching response from "${url}"."`)
 
     const newEntry = { url, response, lastRead: Date.now() }
     this.cache.set(url, newEntry)
@@ -52,7 +52,7 @@ export class RequestCacheWithMap implements RequestCache{
       }
     })
 
-    this.messageService.add(`Request cache size: ${this.cache.size}.`)
+    this.messageService.emit(`Request cache size: ${this.cache.size}.`)
   }
 
 }

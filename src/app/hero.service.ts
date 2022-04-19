@@ -19,7 +19,7 @@ export class HeroService {
   getHeroes() {
     // specify the response object type withe an Interface
     const heroes$ = this.http.get<MockHeroes>(this.heroesUrl).pipe(
-      tap(_ => this.messageService.add('HeroService: fetched heroes')),
+      tap(_ => this.messageService.emit('HeroService: fetched heroes')),
       retry(3),
       catchError(this.handleError),
     ).pipe(

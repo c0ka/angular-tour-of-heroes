@@ -8,10 +8,16 @@ import { MessageService } from '../message.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
+  messages: string[] = []
 
   constructor(public messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.messageService.messages$.subscribe( message => this.messages.push(message))
+  }
+
+  clear() {
+    this.messages = []
   }
 
 }
