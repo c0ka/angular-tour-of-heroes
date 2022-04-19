@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { retry, catchError, throwError, map, tap, Observable, of } from 'rxjs';
 
-import { MessageService } from './message.service';
+import { MessageService } from './messages/message.service';
 
 @Injectable({
   providedIn: 'root'

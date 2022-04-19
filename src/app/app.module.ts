@@ -22,6 +22,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 // Http request caching service
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 import { HttpInterceptorProvider } from './http-interceptors';
+import { MessagesModule } from './messages/messages.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HttpInterceptorProvider } from './http-interceptors';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MessagesModule
   ],
   providers: [
     { provide: RequestCache, useClass: RequestCacheWithMap },
