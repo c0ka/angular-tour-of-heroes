@@ -3,13 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// User defined routing, components
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 // Angular Material
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,6 +17,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 import { HttpInterceptorProvider } from './http-interceptors';
 import { MessagesModule } from './messages/messages.module';
+// User defined routing, components
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { MessagesModule } from './messages/messages.module';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    CrisisListComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

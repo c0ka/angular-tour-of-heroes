@@ -13,6 +13,7 @@ export class MessageService {
   constructor( private _snackBar: MatSnackBar ) {
     this.messages$
       .subscribe(
+        // todo: data persistance
         value => this._snackBar.open( value, undefined, { duration: 3000 })
       )
   }
