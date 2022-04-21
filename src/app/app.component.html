@@ -18,8 +18,8 @@
 </button>
 </mat-toolbar>
 <!--  -->
-<main>
-  <router-outlet></router-outlet>
+<main [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
 </main>
 <footer>
   <app-messages></app-messages>

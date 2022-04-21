@@ -5,11 +5,9 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { retry, catchError, throwError, map, tap, Observable, of } from 'rxjs';
 
-import { MessageService } from './messages/message.service';
+import { MessageService } from '../messages/message.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HeroService {
   heroesUrl: string = 'assets/mock-heroes.json'
 

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 // Angular Material
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,21 +16,19 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 import { HttpInterceptorProvider } from './http-interceptors';
 import { MessagesModule } from './messages/messages.module';
-// User defined routing, components
+// user defined routing, components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// user defined feature module
+import { HeroesModule } from './heroes/heroes.module';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
     CrisisListComponent,
@@ -39,10 +36,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    HeroesModule,        // <-- Instant load
+    MessagesModule,
+    AppRoutingModule,    // <-- should be the last routing module loaded
     MatDividerModule,
     MatToolbarModule,
     MatGridListModule,
@@ -50,8 +49,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule,
-    MessagesModule
+    LayoutModule
   ],
   providers: [
     { provide: RequestCache, useClass: RequestCacheWithMap },

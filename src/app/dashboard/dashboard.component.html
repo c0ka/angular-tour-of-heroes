@@ -1,7 +1,7 @@
 <h2>Top Heroes</h2>
 <mat-divider></mat-divider>
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+  <a *ngFor="let hero of heroes" routerLink="/hero/{{hero.id}}">
     <mat-card class="hero-card">
       <img mat-card-image src={{hero.avatarUrl}} alt="Photo of hero">
       <mat-card-title-group class="hero-title">
