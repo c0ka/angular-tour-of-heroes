@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrisisListComponent } from './crisis-list/crisis-list.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 const appRoutes: Routes = [
   // unmatched segments of the URL
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  { path: 'crisis-center', component: CrisisListComponent },
+  { 
+    path: 'crisis-center', 
+    loadChildren: () => import('./crisis-center/crisis-center.module').then( m =>
+      m.CrisisCenterModule),
+      data: { preload: true }  // <-- for custom preloading strategy
+  },
   { path: 'dashboard', component: DashboardComponent},
   // fallback route to 404
   { path: '**', component: PageNotFoundComponent }
@@ -18,7 +25,8 @@ const appRoutes: Routes = [
     // forRoot() returns a module that contains the configured Router service provider
     // and other providers that the routing library requires.
     RouterModule.forRoot( appRoutes, 
-                        { enableTracing: true }) // <-- debugging only
+      { enableTracing: true,  // <-- debugging only
+        preloadingStrategy: SelectivePreloadingStrategyService }) 
   ],
   exports: [RouterModule]
 })
