@@ -20,7 +20,6 @@ import { MessagesModule } from './messages/messages.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // user defined feature module
 import { HeroesModule } from './heroes/heroes.module';
@@ -31,7 +30,6 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     MessagesComponent,
     DashboardComponent,
-    CrisisCenterComponent,
     PageNotFoundComponent,
   ],
   imports: [

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
+import { CrisisCenterComponent } from './crisis-center.component';
 
 const routes: Routes = [
   { path: '', component: CrisisCenterComponent }

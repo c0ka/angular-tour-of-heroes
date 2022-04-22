@@ -7,16 +7,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 
 const appRoutes: Routes = [
-  // unmatched segments of the URL
+  // for unmatched segments of the URL
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   { 
+    // lazy-load module with custom preloading strategy
     path: 'crisis-center', 
     loadChildren: () => import('./crisis-center/crisis-center.module').then( m =>
       m.CrisisCenterModule),
-      data: { preload: true }  // <-- for custom preloading strategy
+      data: { preload: true }  // <--
   },
   { path: 'dashboard', component: DashboardComponent},
-  // fallback route to 404
+  // fallback route to 404, must be the last
   { path: '**', component: PageNotFoundComponent }
 ]
 
