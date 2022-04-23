@@ -8,6 +8,7 @@
    <a mat-button routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
    <a mat-button routerLink="/heroes" routerLinkActive="active">HEROES</a>
    <a mat-button routerLink="/crisis-center" routerLinkActive="active">CRISIS CENTER</a>
+   <a mat-button [routerLink]="[{ outlets: { popup: ['compose'] }}]">CONTACT</a>
 </div>
  <span class="app-spacer"></span>
  <button mat-icon-button aria-label="Example icon-button with heart icon">
@@ -20,6 +21,7 @@
 <!--  -->
 <main [@routeAnimation]="getAnimationData(routerOutlet)">
   <router-outlet #routerOutlet="outlet"></router-outlet>
+  <router-outlet name="popup"></router-outlet>
 </main>
 <footer>
   <app-messages></app-messages>

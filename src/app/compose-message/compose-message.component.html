@@ -1,0 +1,23 @@
+<div class="overlay-background">
+  <content class="overlay-content">
+    <h2>Contact Crisis Center</h2>
+    
+    <div *ngIf="details">
+      {{ details }}
+    </div>
+    <div>
+      <div>
+        <label for="message">Enter your message:</label>
+      </div>
+      <div>
+        <textarea id="message" [(ngModel)]="message" rows="10" cols="35" 
+        [disabled]="sending"></textarea>
+      </div>
+    </div>
+    
+    <p *ngIf="!sending">
+      <button (click)="send()">Send</button>
+      <button (click)="cancel()">Cancel</button>
+    </p>
+  </content>
+</div>
