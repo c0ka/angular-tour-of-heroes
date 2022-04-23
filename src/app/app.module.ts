@@ -24,12 +24,12 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // user defined feature module
 import { HeroesModule } from './heroes/heroes.module';
-import { MessagesComponent } from './messages/messages.component';
+import { AdminModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent,
     DashboardComponent,
     PageNotFoundComponent,
     ComposeMessageComponent,
@@ -41,6 +41,8 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule,
     HeroesModule,        // <-- Instant load
     MessagesModule,
+    AdminModule,
+    AuthModule,
     AppRoutingModule,    // <-- should be the last routing module loaded
     MatDividerModule,
     MatToolbarModule,
