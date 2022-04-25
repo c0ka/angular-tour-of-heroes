@@ -10,10 +10,11 @@ import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
 
 const adminRoutes: Routes = [
   {
-    path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
+    path: '', component: AdminComponent, canActivate: [AuthGuard], children: [
       {
-        // component-less route can protect child routes
-        path: '', children: [
+        // component-less route can protect child routes one time for all
+        path: '', canActivateChild: [AuthGuard],
+        children: [
           { path: 'crises', component: ManageCrisesComponent },
           { path: 'heroes', component: ManageHeroesComponent },
           { path: '', component: AdminDashboardComponent }

@@ -10,17 +10,17 @@ import { CrisisService } from '../crisis.service';
   styleUrls: ['./crisis-list.component.css']
 })
 export class CrisisListComponent implements OnInit {
-  crisis$!: Observable<Crisis[]>
+  crises$!: Observable<Crisis[]>
   selectedId = 0
 
   constructor(private service: CrisisService, private route: ActivatedRoute) { 
   }
 
   ngOnInit(): void {
-    this.crisis$ = this.route.paramMap.pipe(
+    this.crises$ = this.route.paramMap.pipe(
       switchMap( param => {
         this.selectedId = parseInt(param.get('id')!, 10)
-        return this.service.getCrisis()
+        return this.service.getCrises()
       })
     )
   }

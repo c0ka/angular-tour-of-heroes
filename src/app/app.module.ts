@@ -24,8 +24,9 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // user defined feature module
 import { HeroesModule } from './heroes/heroes.module';
-import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
+
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,6 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     HeroesModule,        // <-- Instant load
     MessagesModule,
-    AdminModule,
     AuthModule,
     AppRoutingModule,    // <-- should be the last routing module loaded
     MatDividerModule,
@@ -59,4 +59,13 @@ import { AuthModule } from './auth/auth.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  // diagnostic only: inspect router configuration
+  constructor(router: Router) {
+    // use a custom replacer to display function names in the route configs
+    // const replacer = (key: string, value: any) => (typeof value === 'function') ? 
+    //   value.name : value
+    
+    // console.log('Routes: ', JSON.stringify(router.config, replacer, 2))
+  }
+}

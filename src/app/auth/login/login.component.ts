@@ -26,7 +26,7 @@ export class LoginComponent {
         this.message = this.getMessage()
         if (this.authService.isLoggedIn) {
           const redirectUrl = '/admin'
-          // set our navigaion extras object
+          // set our navigation extras object
           // that passes on our global query params and fragment
           const navigationExtra: NavigationExtras = {
             queryParamsHandling: 'preserve',

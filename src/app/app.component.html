@@ -8,11 +8,14 @@
    <a mat-button routerLink="/dashboard" routerLinkActive="active">DASHBOARD</a>
    <a mat-button routerLink="/heroes" routerLinkActive="active">HEROES</a>
    <a mat-button routerLink="/crisis-center" routerLinkActive="active">CRISIS CENTER</a>
-   <a mat-button routerLink="/admin" routerLinkActive="active">ADMIN</a>
    <a mat-button [routerLink]="[{ outlets: { popup: ['compose'] }}]">CONTACT</a>
-   <a mat-button routerLink="/login" routerLinkActive="active">LOGIN/OUT</a>
-</div>
- <span class="app-spacer"></span>
+  </div>
+  <span class="app-spacer"></span>
+  <div class="admin-menu">
+   <a mat-button routerLink="/admin" routerLinkActive="active"
+      *ngIf="authService.isLoggedIn">ADMIN</a>
+   <a mat-button routerLink="/login" routerLinkActive="active">LOG IN/OUT</a>
+ </div>
  <button mat-icon-button aria-label="Example icon-button with heart icon">
    <mat-icon>favorite</mat-icon>
  </button>
