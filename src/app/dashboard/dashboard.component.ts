@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 
 import { HeroService, Hero } from '../heroes/hero.service';
@@ -19,5 +20,9 @@ export class DashboardComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(data => this.heroes = data.slice(1, 5));
+  }
+
+  drop(e: CdkDragDrop<Hero[]>) {
+    moveItemInArray(this.heroes, e.previousIndex, e.currentIndex)
   }
 }

@@ -2,9 +2,36 @@
 
   <h2>{{hero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name:</label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  <!--
+    FormGroup directive listens for the submit event by the form element
+    and emits an ngSubmit event
+  -->
+  <form class="hero-form" [formGroup]="heroForm" #formDir="ngForm" (ngSubmit)="onFormSubmit()">
+    <div [hidden]="formDir.submitted">
+      <mat-form-field class="name-field" appearance="fill">
+        <mat-label for="name">Name</mat-label>
+        <input matInput id="name" formControlName="name" required>
+        <mat-error *ngIf="heroForm.get('name')?.invalid">{{getErrorMessage('name')}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="name-field" appearance="fill">
+        <mat-label for="fullName">Full Name</mat-label>
+        <input matInput id="fullName" formControlName="fullName">
+      </mat-form-field>
+
+      <mat-form-field class="des-field" appearance="fill">
+        <mat-label for="shortDes">Short Description</mat-label>
+        <textarea matInput id="shortDes" formControlName="shortDescription">
+        </textarea>
+      </mat-form-field>
+      <button mat-stroked-button type="submit" color="primary" [disabled]="heroForm.invalid">Submit</button>
+    </div>
+  </form>
+  <div [style]="{color: 'gray'}">
+    <h2>Debug Info: Form Value</h2>
+    <p>{{heroForm.value | json}}</p>
+    <h2>Debug Info: Component Value</h2>
+    <p>{{hero | json}}</p>
   </div>
-  <button (click)="goBack()">go back</button>
+  <button mat-stroked-button color="accent" (click)="goBack()">go back</button>
 </div>

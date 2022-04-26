@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DragDropModule } from "@angular/cdk/drag-drop";
 // Http request caching service
 import { RequestCache, RequestCacheWithMap } from './request-cache.service';
 import { HttpInterceptorProvider } from './http-interceptors';
@@ -51,6 +52,7 @@ import { Router } from '@angular/router';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    DragDropModule,
     LayoutModule,
   ],
   providers: [
