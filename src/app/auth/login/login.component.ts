@@ -1,46 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { ApiError, Session } from '@supabase/gotrue-js';
+import { SupabaseService } from '../supabase.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  message: string
+export class LoginComponent implements OnInit{
+  loading: Boolean = false
+  isSignedIn: Boolean = false
 
-  constructor(public authService: AuthService, public router: Router) {
-    this.message = this.getMessage()
+  constructor(public spService: SupabaseService, public router: Router) {
   }
 
-  getMessage() {
-    return 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out')
+  ngOnInit() {
+    // this.spService.authChanges((_, session) => this.session = session)
+    this.isSignedIn = !!this.spService.session?.user
   }
 
-  login() {
-    this.message = 'Trying to log in ...'
-
-    this.authService.login().subscribe(
-      () => {
-        this.message = this.getMessage()
-        if (this.authService.isLoggedIn) {
-          const redirectUrl = '/admin'
-          // set our navigation extras object
-          // that passes on our global query params and fragment
-          const navigationExtra: NavigationExtras = {
-            queryParamsHandling: 'preserve',
-            preserveFragment: true
-          }
-          this.router.navigate([redirectUrl], navigationExtra)
-        }
-      }
-    )
+  async handleLogin(email: string, password: string) {
+    try {
+      this.loading = true;
+      let {error} = await this.spService.signIn(email, password);
+      if (error) alert('Something Wrong:' + error.message + error.status)
+      alert('Check your email for the login link!');
+    } catch (error) {
+      alert( (error as ApiError).message)
+    } finally {
+      this.loading = false;
+    }
   }
 
-  logout() {
-    this.authService.logout()
-    this.message = this.getMessage()
+  async handleLogout(): Promise<void> {
+    try {
+      this.loading = true
+      await this.spService.signOut()
+      alert('Yor have logged out!')
+      await this.router.navigate(['/dashboard'])
+    } catch (error) {
+      console.error(error)
+    }
   }
-
 }

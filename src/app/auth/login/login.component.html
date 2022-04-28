@@ -1,6 +1,28 @@
-<h2>Login</h2>
-<p>{{message}}</p>
-<p>
-  <button (click)="login()" *ngIf="!authService.isLoggedIn">Login</button>
-  <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-</p>
+<div>
+  <form>
+    <h1>Sign In</h1>
+    <p>Sign in/Sign ip via magic link with your email below</p>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Your email" #email>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" #password>
+    </div>
+
+    <div>
+      <button type="submit" (click)="handleLogin(email.value, password.value)" [disabled]="loading">
+        {{loading ? 'Loading' : 'Sign in'}}
+      </button>
+    </div>
+    <div>
+      <button type="submit" (click)="handleLogout()" [disabled]="loading">
+        {{loading ? 'Loading' : 'Sign out'}}
+      </button>
+    </div>
+  </form>
+  <div *ngIf="isSignedIn">
+    User signed in!!
+  </div>
+</div>
