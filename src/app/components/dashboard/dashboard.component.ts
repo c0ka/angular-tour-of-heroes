@@ -1,7 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 
-import { HeroService, Hero } from '../heroes/hero.service';
+import { HeroService, Hero } from '../../heroes/hero.service';
 
 @Component({
   selector: 'app-dashboard',

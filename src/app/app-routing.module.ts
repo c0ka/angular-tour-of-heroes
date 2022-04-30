@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { ComposeMessageComponent } from './components/compose-message/compose-message.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
 

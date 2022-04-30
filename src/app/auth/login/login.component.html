@@ -1,28 +1,19 @@
-<div>
-  <form>
-    <h1>Sign In</h1>
-    <p>Sign in/Sign ip via magic link with your email below</p>
-    <div>
-      <label for="email">Email</label>
-      <input type="text" id="email" placeholder="Your email" #email>
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" id="password" #password>
-    </div>
+<div class="container">
+  <h1>Sign In</h1>
+  <form [formGroup]="loginForm" #formDir="ngForm" (ngSubmit)="onFormSubmit()">
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label for="email">Email</mat-label>
+      <input matInput type="email" id="email" formControlName="email" required>
+    </mat-form-field>
 
-    <div>
-      <button type="submit" (click)="handleLogin(email.value, password.value)" [disabled]="loading">
-        {{loading ? 'Loading' : 'Sign in'}}
-      </button>
-    </div>
-    <div>
-      <button type="submit" (click)="handleLogout()" [disabled]="loading">
-        {{loading ? 'Loading' : 'Sign out'}}
-      </button>
-    </div>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label for="password">Password</mat-label>
+      <input matInput type="password" id="password" formControlName="password" required>
+    </mat-form-field>
+    <button mat-stroked-button type="submit" color="primary" [disabled]="loginForm.invalid">
+      {{loading ? 'Loading' : 'Sign in'}}
+    </button>
   </form>
-  <div *ngIf="isSignedIn">
-    User signed in!!
-  </div>
 </div>
+<!-- Only for debug -->
+<p>{{ formDir.value| json }}</p>

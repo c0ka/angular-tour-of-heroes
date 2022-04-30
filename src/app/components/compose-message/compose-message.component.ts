@@ -1,3 +1,6 @@
+/**
+ * Component to demonstrate the second outlet(popup)
+ */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

@@ -20,9 +20,9 @@ import { MessagesModule } from './messages/messages.module';
 // user defined routing, components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ComposeMessageComponent } from './components/compose-message/compose-message.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 // user defined feature module
 import { HeroesModule } from './heroes/heroes.module';
 import { AuthModule } from './auth/auth.module';

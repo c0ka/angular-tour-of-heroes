@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApiError, Session } from '@supabase/gotrue-js';
+
+import { MessageService } from 'src/app/messages/message.service';
 import { SupabaseService } from '../supabase.service';
 
 @Component({
@@ -8,35 +10,40 @@ import { SupabaseService } from '../supabase.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent {
   loading: Boolean = false
-  isSignedIn: Boolean = false
 
-  constructor(public spService: SupabaseService, public router: Router) {
-  }
+  loginForm = new FormGroup({
+    email: new FormControl('',[Validators.required]),
+    password: new FormControl('')
+  })
 
-  ngOnInit() {
-    // this.spService.authChanges((_, session) => this.session = session)
-    this.isSignedIn = !!this.spService.session?.user
-  }
+  constructor(
+    public supabase: SupabaseService, 
+    public router: Router,
+    private messageService: MessageService
+    ) { }
 
-  async handleLogin(email: string, password: string) {
-    try {
+  async onFormSubmit() {
+      const { email, password } = this.loginForm.value
+
       this.loading = true;
-      let {error} = await this.spService.signIn(email, password);
-      if (error) alert('Something Wrong:' + error.message + error.status)
-      alert('Check your email for the login link!');
-    } catch (error) {
-      alert( (error as ApiError).message)
-    } finally {
+      let { user, error } = await this.supabase.signIn(email, password)
+      
       this.loading = false;
-    }
+      this.loginForm.reset()
+      if (error) {
+        this.messageService.emit('Error: ' + error.message)
+      } else {
+        this.messageService.emit('Welcome on board: ' + user?.email)
+        this.router.navigate(['/dashboard'])
+      }
   }
 
   async handleLogout(): Promise<void> {
     try {
       this.loading = true
-      await this.spService.signOut()
+      await this.supabase.signOut()
       alert('Yor have logged out!')
       await this.router.navigate(['/dashboard'])
     } catch (error) {

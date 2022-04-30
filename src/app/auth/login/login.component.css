@@ -1,0 +1,15 @@
+.container {
+  margin: 8rem auto;
+  width: 50%;
+  height: 16rem;
+  min-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  /* align items on the cross axis */
+  align-items: center;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: .5rem;
+}

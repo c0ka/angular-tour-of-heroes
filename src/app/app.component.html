@@ -14,7 +14,9 @@
   <div class="admin-menu">
    <a mat-button routerLink="/admin" routerLinkActive="active"
       *ngIf="authService.isLoggedIn">ADMIN</a>
-   <a mat-button routerLink="/login" routerLinkActive="active">LOG IN/OUT</a>
+   <a mat-button routerLink="/login" routerLinkActive="active">
+     {{ isLoggedIn ? "SIGN OUT" : "SIGN IN"}}
+   </a>
  </div>
  <button mat-icon-button aria-label="Example icon-button with heart icon">
    <mat-icon>favorite</mat-icon>
