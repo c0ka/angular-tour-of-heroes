@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animation';
 
 import { AuthService } from './auth/auth.service';
-import { SupabaseService } from './auth/supabase.service';
+import { SupabaseService } from './services/supabase.service';
 
 @Component({
   selector: 'app-root',

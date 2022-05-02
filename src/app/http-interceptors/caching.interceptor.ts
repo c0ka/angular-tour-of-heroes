@@ -8,7 +8,7 @@ import {
 } from '@angular/common/http';
 import { Observable, of, startWith, tap } from 'rxjs';
 
-import { RequestCache } from '../request-cache.service';
+import { RequestCache } from '../services/request-cache.service';
 
 const cacheableUrl: string = 'assets/mock-heroes'
 

@@ -6,7 +6,7 @@ import { ComposeMessageComponent } from './components/compose-message/compose-me
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+import { SelectivePreloadingStrategyService } from './services/selective-preloading-strategy.service';
 
 const appRoutes: Routes = [
   // for unmatched segments of the URL

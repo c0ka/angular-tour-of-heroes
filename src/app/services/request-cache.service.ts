@@ -1,7 +1,7 @@
 import { HttpRequest, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { MessageService } from './messages/message.service';
+import { MessageService } from '../messages/message.service';
 
 export interface RequestCacheEntry {
   url: string

@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { MessageService } from 'src/app/messages/message.service';
-import { SupabaseService } from '../supabase.service';
+import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
   selector: 'app-login',

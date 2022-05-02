@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { createClient, SupabaseClient, AuthChangeEvent, Session } from '@supabase/supabase-js';
+import { createClient, SupabaseClient, AuthChangeEvent, Session } from '@supabase/supabase-js'; 
 import { environment } from 'src/environments/environment';
+import { definitions } from './supabase.type';
 
-export interface Profile {
-  username: string
-  website: string
-  avatar_url: string
-}
+export type Profile = definitions["profiles"] 
+
+export type Crisis = definitions["crises"]
 
 @Injectable({
   providedIn: 'root'
@@ -78,5 +77,10 @@ export class SupabaseService {
     return this.supabase.storage
       .from('avatars')
       .upload(filePath, file)
+  }
+
+  async getCrises() {
+      const { data, error } =  await this.supabase.from<Crisis>('crises').select()
+      return { data, error }
   }
 }
