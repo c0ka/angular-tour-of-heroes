@@ -18,6 +18,7 @@ export class HeroService {
     // specify the response object type withe an Interface
     const heroes$ = this.http.get<MockHeroes>(this.heroesUrl).pipe(
       tap(_ => this.messageService.emit('HeroService: fetched heroes')),
+      // resubscribe if the source stream error at most count time
       retry(3),
       catchError(this.handleError),
     ).pipe(
