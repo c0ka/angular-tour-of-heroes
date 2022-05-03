@@ -5,8 +5,6 @@ import { definitions } from './supabase.type';
 
 export type Profile = definitions["profiles"] 
 
-export type Crisis = definitions["crises"]
-
 @Injectable({
   providedIn: 'root'
 })
@@ -80,7 +78,7 @@ export class SupabaseService {
   }
 
   async getCrises() {
-      const { data, error } =  await this.supabase.from<Crisis>('crises').select()
+      const { data, error } =  await this.supabase.from<definitions["crises"]>('crises').select()
       return { data, error }
   }
 }

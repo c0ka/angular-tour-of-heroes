@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
-import { Crisis } from '../crisis';
+import { Crisis } from '../crisis.type';
 import { CrisisService } from '../crisis.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CrisisService } from '../crisis.service';
   styleUrls: ['./crisis-list.component.css']
 })
 export class CrisisListComponent implements OnInit {
-  crises$!: Observable<Crisis[]>
+  crises$!: Observable<Crisis[]|null>
   selectedId = 0
 
   constructor(private service: CrisisService, private route: ActivatedRoute) { 

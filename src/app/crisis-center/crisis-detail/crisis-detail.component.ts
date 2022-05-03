@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Crisis } from '../crisis';
+import { Crisis } from '../crisis.type';
 import { DialogService } from '../../services/dialog.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { DialogService } from '../../services/dialog.service';
 })
 export class CrisisDetailComponent implements OnInit {
   crisis!: Crisis;
-  editName = '';
+  editName: string | undefined = '';
 
   constructor(
     private route: ActivatedRoute,

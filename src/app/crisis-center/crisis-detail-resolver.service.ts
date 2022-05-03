@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { mergeMap, Observable, of, take, EMPTY } from 'rxjs';
 
-import { Crisis } from './crisis';
+import { Crisis } from './crisis.type';
 import { CrisisService } from './crisis.service';
 
 @Injectable({
